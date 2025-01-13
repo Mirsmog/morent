@@ -3,19 +3,80 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Neutral Palette */
+  --color-primary-neutral-900: 231deg 84% 24%;
+  --color-primary-neutral-800: 229deg 79% 30%;
+  --color-primary-neutral-700: 228deg 73% 38%;
+  --color-primary-neutral-600: 226deg 68% 47%;
+  --color-primary-neutral-500: 225deg 80% 56%;
+  --color-primary-neutral-400: 223deg 83% 67%;
+  --color-primary-neutral-300: 222deg 89% 75%;
+  --color-primary-neutral-200: 220deg 93% 84%;
+  --color-primary-neutral-100: 218deg 90% 92%;
+  --color-primary-neutral-0: 0deg 0% 100%;
+
+  /* Success Palette */
+  --color-success-900: 87deg 88% 21%;
+  --color-success-800: 85deg 83% 26%;
+  --color-success-700: 82deg 79% 33%;
+  --color-success-600: 81deg 75% 40%;
+  --color-success-500: 79deg 71% 48%;
+  --color-success-400: 77deg 73% 61%;
+  --color-success-300: 75deg 81% 71%;
+  --color-success-200: 73deg 89% 82%;
+  --color-success-100: 70deg 87% 91%;
+
+  /* Error Palette */
+  --color-error-900: 350deg 91% 25%;
+  --color-error-800: 355deg 86% 31%;
+  --color-error-700: 360deg 83% 39%;
+  --color-error-600: 4deg 80% 48%;
+  --color-error-500: 9deg 100% 57%;
+  --color-error-400: 14deg 100% 67%;
+  --color-error-300: 18deg 100% 74%;
+  --color-error-200: 23deg 100% 83%;
+  --color-error-100: 27deg 100% 91%;
+
+  /* Warning Palette */
+  --color-warning-900: 36deg 83% 26%;
+  --color-warning-800: 38deg 78% 32%;
+  --color-warning-700: 39deg 73% 42%;
+  --color-warning-600: 41deg 71% 51%;
+  --color-warning-500: 43deg 100% 61%;
+  --color-warning-400: 45deg 100% 71%;
+  --color-warning-300: 46deg 100% 77%;
+  --color-warning-200: 47deg 100% 85%;
+  --color-warning-100: 49deg 100% 92%;
+
+  /* Information Palette */
+  --color-information-900: 223deg 77% 27%;
+  --color-information-800: 220deg 70% 34%;
+  --color-information-700: 217deg 63% 44%;
+  --color-information-600: 214deg 69% 55%;
+  --color-information-500: 211deg 100% 66%;
+  --color-information-400: 208deg 100% 75%;
+  --color-information-300: 206deg 100% 80%;
+  --color-information-200: 203deg 100% 86%;
+  --color-information-100: 201deg 100% 93%;
+
+  /* Secondary Palette */
+  --color-secondary-900: 226deg 68% 5%;
+  --color-secondary-800: 226deg 52% 6%;
+  --color-secondary-700: 223deg 41% 9%;
+  --color-secondary-600: 223deg 32% 11%;
+  --color-secondary-500: 220deg 26% 14%;
+  --color-secondary-400: 218deg 18% 43%;
+  --color-secondary-300: 216deg 27% 66%;
+  --color-secondary-200: 213deg 46% 84%;
+  --color-secondary-100: 213deg 48% 92%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .btn {
+    @apply inline-flex bg-primary-500 rounded-md py-2.5 px-5 text-base font-semibold text-primary-0;
+
+    &.btn--ghost {
+      @apply bg-transparent text-primary-500
+    }
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

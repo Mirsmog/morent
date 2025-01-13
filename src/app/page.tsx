@@ -2,118 +2,20 @@ import {
   FuelIcon,
   HeartIcon,
   LifeBuoyIcon,
-  SearchIcon,
-  Settings2Icon,
   UsersRoundIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { Header } from "@/components/share/header";
+import { BannerSection } from "@/components/share/banner-section";
+import { CatalogSection } from "@/components/share/catalog-section";
 
 export default function Home() {
   return (
     <div className="">
-      <header>
-        <div>
-          <Link href={"/"}>MORENT</Link>
-
-          <div>
-            <form>
-              <div>
-                <button type="submit">
-                  <SearchIcon />
-                </button>
-                <input placeholder="Search something here" />
-                <Link href={"/search"}>
-                  <Settings2Icon />
-                </Link>
-              </div>
-            </form>
-          </div>
-          <div>
-            <div>
-              <HeartIcon />
-              <div>User</div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main>
-        <section>
-          <div>
-            <div>
-              <h2>The Best Platform for Car Rental</h2>
-              <p>
-                Ease of doing a car rental safely and reliably. Of course at a
-                low price.
-              </p>
-              <Link href={"/"}>Rental Car</Link>
-              <div>
-                <img alt="car" />
-              </div>
-            </div>
-
-            <div>
-              <h2>Easy way to rent a car at a low price</h2>
-              <p>
-                Providing cheap car rental services and safe and comfortable
-                facilities.
-              </p>
-              <Link href={"/"}>Rental Car</Link>
-              <div>
-                <img alt="car" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div>
-            <h3>Popular car</h3>
-            <Link href={"/"}>View All</Link>
-          </div>
-          <ul>
-            <li>
-              <div>
-                <div>
-                  <div>Nissan GT - R</div>
-                  <p>Sport</p>
-                </div>
-                <button>
-                  <HeartIcon />
-                </button>
-              </div>
-
-              <div>
-                <img alt="car name" />
-              </div>
-
-              <div>
-                <div>
-                  <div>
-                    <FuelIcon />
-                    <span>80L</span>
-                  </div>
-                  <div>
-                    <LifeBuoyIcon />
-                    <span>Manual</span>
-                  </div>
-                  <div>
-                    <UsersRoundIcon />
-                    <span>2 People</span>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <div>
-                      <span>$99.00/</span>
-                      <span>day</span>
-                    </div>
-                    <s>$100.00</s>
-                  </div>
-                  <Link href={"/"}>Rent Now</Link>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
+      <Header />
+      <main className="bg-[#F6F7F9] pt-8">
+        <BannerSection />
+        <CatalogSection />
 
         <section>
           <div>
