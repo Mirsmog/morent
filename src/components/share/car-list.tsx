@@ -24,7 +24,7 @@ export const CarList: React.FC<ICarList> = ({ title, link, cars, show }) => {
       </div>
       <ul className="mt-5 flex flex-wrap gap-8">
         {carArray.map((car) => (
-          <CarCard {...car} />
+          <CarCard key={car.id} {...car} />
         ))}
       </ul>
     </div>

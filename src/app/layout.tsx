@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jakarta.variable} font-jakarta`}>{children}</body>
+      <body className={`${jakarta.variable} font-jakarta bg-[#F6F7F9]`}>
+        {children}
+      </body>
     </html>
   );
 }
